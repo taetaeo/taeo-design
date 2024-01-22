@@ -42,7 +42,8 @@
     "preview": "vite preview",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "release": "sh ./scripts/release.sh"
+    "release": "sh ./scripts/release.sh",
+    "clean": "rm -rf dist"
   },
   "dependencies": {
     "react": "^18.2.0",
