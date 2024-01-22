@@ -1,0 +1,85 @@
+{
+  "name": "taeo-design",
+  "description": "TAEO's Design System",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/taetaeo/taeo-design.git"
+  },
+  "private": false,
+  "version": "0.0.0",
+  "type": "module",
+  "main": "dist/index.es.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.es.js",
+      "require": "./dist/index.umd.js",
+      "types": "./dist/index.d.ts"
+    },
+    "./package.json": "./package.json",
+    "./dist/*": "./dist/*"
+  },
+  "files": [
+    "/dist"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "keywords": [
+    "react",
+    "typescript",
+    "tailwindcss",
+    "ui",
+    "components",
+    "storybook",
+    "vite"
+  ],
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build && npm run tailwind",
+    "tailwind": "npx tailwindcss -o ./dist/index.css --minify",
+    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "preview": "vite preview",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build",
+    "release": "sh ./scripts/release.sh"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@storybook/addon-essentials": "^7.6.10",
+    "@storybook/addon-interactions": "^7.6.10",
+    "@storybook/addon-links": "^7.6.10",
+    "@storybook/addon-onboarding": "1.0.10",
+    "@storybook/blocks": "^7.6.10",
+    "@storybook/react": "^7.6.10",
+    "@storybook/react-vite": "^7.6.10",
+    "@storybook/test": "^7.6.10",
+    "@types/react": "^18.2.43",
+    "@types/react-dom": "^18.2.17",
+    "@typescript-eslint/eslint-plugin": "^6.14.0",
+    "@typescript-eslint/parser": "^6.14.0",
+    "@vitejs/plugin-react": "^4.2.1",
+    "autoprefixer": "^10.4.17",
+    "eslint": "^8.55.0",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.4.5",
+    "eslint-plugin-storybook": "^0.6.15",
+    "postcss": "^8.4.33",
+    "storybook": "^7.6.10",
+    "tailwindcss": "^3.4.1",
+    "typescript": "^5.2.2",
+    "vite": "^5.0.8",
+    "vite-plugin-dts": "^3.7.1"
+  },
+  "license": "MIT",
+  "contributors": [
+    {
+      "name": "TaeKwon Oh",
+      "email": "ohtk1119@gmail.com",
+      "url": "https://github.com/taetaeo"
+    }
+  ]
+}
