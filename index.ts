@@ -1,1 +1,1 @@
-export { default as TaeoButton } from "./src/components/buttons/taeo-button";
+export { default as TaeoButton } from "./src/components/buttons/default-button";
